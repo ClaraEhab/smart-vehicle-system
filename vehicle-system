@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+class distancee{
+protected:
+    int feet;
+    float inches;
+public:
+    distancee(){
+    feet=0;
+    inches=0.0;
+    }
+    distancee(int f, float i){
+    feet=f;
+    inches=i;
+    }
+    void setdistance(int f, float i){
+    feet=f;
+    inches=i;
+    }
+    distancee add_distance (distancee d2){
+    int f=d2.feet+feet;
+    float i=d2.inches+inches;
+    }
+    void display(){
+    cout<< "feet = "<<feet<< " & inches= "<<inches<<endl;
+    }
+};
+int main()
+{ distancee d1(5,7.5);
+distancee d2(7,6.5);
+distancee d3=d1.add_distance(d2) ;
+d3.display();
+    return 0;
+}
